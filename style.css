@@ -1,0 +1,155 @@
+/* general styling */
+
+* {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: #d49a66;
+    font-size: 48px;
+    display: inline-block;
+    margin: 0;
+    font-family: ivypresto-headline;
+}
+
+h2 {
+    color: #3c8c90;
+    display: block;
+    font-family: ivypresto-headline;
+    font-size: 32px;
+}
+
+p {
+    color: #1f3743;
+    font-family: ofelia-text, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+
+.header {
+    background-color: #d49a66;
+    background-image: linear-gradient(rgba(31, 55, 67, 0.8), rgba(31, 55, 67, 0.8)), url("./assets/moroccan-background-2.jpg");
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.header p {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: .15em;
+}
+
+/* type effect */
+
+.header-text h1 {
+    overflow: hidden;
+    border-right: 5px solid #fcf1e7; /* typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto;
+    letter-spacing: .3em;
+    animation: 
+      typing 1.5s steps(8, end), /* one step per character */
+      cursor-effect .8s step-end infinite;
+}
+  
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+@keyframes cursor-effect {
+from, to { border-color: transparent }
+50% { border-color: #fcf1e7; }
+}
+
+/* about */
+
+.about {
+    padding: 50px;
+    background-color: #fcf1e7;
+}
+
+.about p {
+    text-align: justify;
+}
+
+/* recipes */
+
+.recipes {
+    min-height: 600px;
+    padding: 50px;
+}
+
+.recipe-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.recipe-card {
+    padding: 10px;
+    border: 1px solid #a35052;
+    height: 250px;
+    width: 200px;
+    margin: 3px;
+    position: relative;
+    transition: .8s ease;
+}
+
+.recipe-card img {
+    width: 90%;
+    height: auto;
+}
+
+.recipe-card:hover {
+    background-color: #e0baba;
+}
+
+/* footer */
+
+.footer-image {
+    background-color: #d49a66;
+    background-image: linear-gradient(rgb(60, 140, 144, 0.8), rgba(60, 140, 144, 0.8)), url("./assets/moroccan-background-2.jpg");
+    height:80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* responsive styling */
+
+@media only screen and (min-width: 512px) {
+    .recipe-container {
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 80px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .about, .recipes {
+        padding: 50px 200px;
+    }
+}
