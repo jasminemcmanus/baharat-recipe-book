@@ -72,13 +72,13 @@ a {
 }
   
 @keyframes typing {
-from { width: 0 }
-to { width: 100% }
+    from { width: 0 }
+    to { width: 100% }
 }
 
 @keyframes cursor-effect {
-from, to { border-color: transparent }
-50% { border-color: #fcf1e7; }
+    from, to { border-color: transparent }
+    50% { border-color: #fcf1e7; }
 }
 
 /* about */
@@ -112,6 +112,7 @@ from, to { border-color: transparent }
     margin: 3px;
     position: relative;
     transition: .8s ease;
+    box-shadow: -4px 4px 8px rgba(95, 62, 63, 0.25);
 }
 
 .recipe-card img {
